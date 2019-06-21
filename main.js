@@ -377,13 +377,17 @@ var TableComponent = /** @class */ (function () {
         //Table starts with 1 column and 1 row
         this.addColumn();
     }
+    TableComponent.prototype.trackByIndex = function (col, row) {
+        if (row === void 0) { row = undefined; }
+        return function () { return "c_" + col + "-r_" + row; };
+    };
     TableComponent.prototype.editColumnTitle = function (index, event) {
         event.stopImmediatePropagation();
         this.editColumnTitleIndex = index;
     };
     TableComponent.prototype.addColumn = function (columnTitle) {
         var _this = this;
-        if (columnTitle === void 0) { columnTitle = "Column Title"; }
+        if (columnTitle === void 0) { columnTitle = "New Column"; }
         if (this.rows.length == 0 && this.firstRowOrColumn) {
             this.firstRowOrColumn = false;
             this.addRow();
@@ -429,6 +433,7 @@ var TableComponent = /** @class */ (function () {
     };
     TableComponent.prototype.onFileSelected = function (event) {
         this.selectedFile = event.target.files[0];
+        //Should Show or Enable the "Open Table" Button
     };
     TableComponent.prototype.openTable = function () {
         var _this = this;
@@ -442,6 +447,8 @@ var TableComponent = /** @class */ (function () {
                 _this.tableName = _this.selectedFile.name.substring(0, _this.selectedFile.name.length - 5);
             };
             fr.readAsText(this.selectedFile);
+            //Should clear Input Field File
+            //Should Hide or Disable the "Open Table" Button
         }
     };
     TableComponent.prototype.testTemplate = function () {
@@ -451,10 +458,6 @@ var TableComponent = /** @class */ (function () {
         this.addColumn("Character");
         this.addColumn("Line");
         this.addRow();
-    };
-    TableComponent.prototype.trackByIndex = function (col, row) {
-        if (row === void 0) { row = undefined; }
-        return function () { return "c_" + col + "-r_" + row; };
     };
     TableComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
