@@ -213,7 +213,7 @@ module.exports = "nav ul {\r\n    background-color: rgb(34, 172, 64);\r\n}\r\n\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav>\r\n\r\n  <ul>\r\n    <li class=\"float-left\"><a href=\"\">Table</a></li>\r\n    <li class=\"float-left\"><a href=\"/script\">Script</a></li>\r\n\r\n    <li class=\"float-right\"><a href=\"https://github.com/josemachado-dev/improved-broccoli/issues/new?assignees=josemachado-dev&labels=Feature+Request&template=feature_request.md&title=%5BFR%5D\" target=\"_blank\">Feature request</a></li>\r\n    <li class=\"float-right\"><a href=\"https://github.com/josemachado-dev/improved-broccoli/issues/new?assignees=josemachado-dev&labels=Bug+Report&template=bug_report.md&title=%5BBUG%5D\" target=\"_blank\">Report Bug</a></li>\r\n  </ul>\r\n  \r\n</nav>\r\n\r\n<br>"
+module.exports = "<nav>\r\n\r\n  <ul>\r\n    <li class=\"float-left\"><a href=\"\">Table</a></li>\r\n<!--     <li class=\"float-left\"><a href=\"/script\">Script</a></li>   -->\r\n    <li class=\"float-right\"><a href=\"https://github.com/josemachado-dev/improved-broccoli/issues/new?assignees=josemachado-dev&labels=Feature+Request&template=feature_request.md&title=%5BFR%5D\" target=\"_blank\">Feature request</a></li>\r\n    <li class=\"float-right\"><a href=\"https://github.com/josemachado-dev/improved-broccoli/issues/new?assignees=josemachado-dev&labels=Bug+Report&template=bug_report.md&title=%5BBUG%5D\" target=\"_blank\">Report Bug</a></li>\r\n  </ul>\r\n  \r\n</nav>\r\n\r\n<br>"
 
 /***/ }),
 
