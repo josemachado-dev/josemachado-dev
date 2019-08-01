@@ -23,6 +23,54 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/app-routing.module.ts":
+/*!***************************************!*\
+  !*** ./src/app/app-routing.module.ts ***!
+  \***************************************/
+/*! exports provided: AppRoutingModule, routingComponents */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routingComponents", function() { return routingComponents; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _passive_dialogues_passive_dialogues_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./passive-dialogues/passive-dialogues.component */ "./src/app/passive-dialogues/passive-dialogues.component.ts");
+/* harmony import */ var _table_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./table/table.component */ "./src/app/table/table.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var routes = [
+    { path: '', component: _table_table_component__WEBPACK_IMPORTED_MODULE_3__["TableComponent"] },
+    { path: 'script', component: _passive_dialogues_passive_dialogues_component__WEBPACK_IMPORTED_MODULE_2__["PassiveDialoguesComponent"] },
+];
+var AppRoutingModule = /** @class */ (function () {
+    function AppRoutingModule() {
+    }
+    AppRoutingModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+        })
+    ], AppRoutingModule);
+    return AppRoutingModule;
+}());
+
+var routingComponents = [
+    _passive_dialogues_passive_dialogues_component__WEBPACK_IMPORTED_MODULE_2__["PassiveDialoguesComponent"],
+];
+
+
+/***/ }),
+
 /***/ "./src/app/app.component.css":
 /*!***********************************!*\
   !*** ./src/app/app.component.css ***!
@@ -41,7 +89,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-nav-bar></app-nav-bar>\r\n\r\n<!-- <app-user-preferences></app-user-preferences>\r\n\r\n<br>\r\n\r\n<app-passive-dialogues></app-passive-dialogues>\r\n\r\n<br> -->\r\n\r\n<app-table></app-table>"
+module.exports = "<!--- Navbar is always present -->\r\n<app-nav-bar></app-nav-bar>\r\n\r\n<!-- <app-user-preferences></app-user-preferences> -->\r\n\r\n<!-- Routed views go here -->\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -97,12 +145,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _user_preferences_user_preferences_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./user-preferences/user-preferences.component */ "./src/app/user-preferences/user-preferences.component.ts");
-/* harmony import */ var _table_table_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./table/table.component */ "./src/app/table/table.component.ts");
-/* harmony import */ var _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./nav-bar/nav-bar.component */ "./src/app/nav-bar/nav-bar.component.ts");
-/* harmony import */ var _passive_dialogues_passive_dialogues_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./passive-dialogues/passive-dialogues.component */ "./src/app/passive-dialogues/passive-dialogues.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _user_preferences_user_preferences_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./user-preferences/user-preferences.component */ "./src/app/user-preferences/user-preferences.component.ts");
+/* harmony import */ var _table_table_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./table/table.component */ "./src/app/table/table.component.ts");
+/* harmony import */ var _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./nav-bar/nav-bar.component */ "./src/app/nav-bar/nav-bar.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -124,17 +172,20 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _user_preferences_user_preferences_component__WEBPACK_IMPORTED_MODULE_5__["UserPreferencesComponent"],
-                _table_table_component__WEBPACK_IMPORTED_MODULE_6__["TableComponent"],
-                _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_7__["NavBarComponent"],
-                _passive_dialogues_passive_dialogues_component__WEBPACK_IMPORTED_MODULE_8__["PassiveDialoguesComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["routingComponents"],
+                _user_preferences_user_preferences_component__WEBPACK_IMPORTED_MODULE_6__["UserPreferencesComponent"],
+                _table_table_component__WEBPACK_IMPORTED_MODULE_7__["TableComponent"],
+                _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_8__["NavBarComponent"],
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
+                _angular_common__WEBPACK_IMPORTED_MODULE_4__["CommonModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -151,7 +202,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".nav button {\r\n    float: right;\r\n    margin-left: 1em;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmF2LWJhci9uYXYtYmFyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osZ0JBQWdCO0FBQ3BCIiwiZmlsZSI6InNyYy9hcHAvbmF2LWJhci9uYXYtYmFyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2IGJ1dHRvbiB7XHJcbiAgICBmbG9hdDogcmlnaHQ7XHJcbiAgICBtYXJnaW4tbGVmdDogMWVtO1xyXG59Il19 */"
+module.exports = "nav ul {\r\n    background-color: rgb(34, 172, 64);\r\n}\r\n\r\nnav li.float-left {\r\n    display: inline-block;\r\n}\r\n\r\nnav li.float-right {\r\n    float: right;\r\n}\r\n\r\nnav a {\r\n    background-color: rgb(34, 172, 64);\r\n    color: rgb(250, 250, 250);\r\n    padding: 10px 25px;\r\n    text-align: center;\r\n    text-decoration: none;\r\n    display: inline-block;\r\n}\r\n\r\nnav a:hover{\r\n    background-color: rgb(16, 187, 0);\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmF2LWJhci9uYXYtYmFyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxrQ0FBa0M7QUFDdEM7O0FBRUE7SUFDSSxxQkFBcUI7QUFDekI7O0FBRUE7SUFDSSxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksa0NBQWtDO0lBQ2xDLHlCQUF5QjtJQUN6QixrQkFBa0I7SUFDbEIsa0JBQWtCO0lBQ2xCLHFCQUFxQjtJQUNyQixxQkFBcUI7QUFDekI7O0FBRUE7SUFDSSxpQ0FBaUM7QUFDckMiLCJmaWxlIjoic3JjL2FwcC9uYXYtYmFyL25hdi1iYXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIm5hdiB1bCB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMzQsIDE3MiwgNjQpO1xyXG59XHJcblxyXG5uYXYgbGkuZmxvYXQtbGVmdCB7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbn1cclxuXHJcbm5hdiBsaS5mbG9hdC1yaWdodCB7XHJcbiAgICBmbG9hdDogcmlnaHQ7XHJcbn1cclxuXHJcbm5hdiBhIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigzNCwgMTcyLCA2NCk7XHJcbiAgICBjb2xvcjogcmdiKDI1MCwgMjUwLCAyNTApO1xyXG4gICAgcGFkZGluZzogMTBweCAyNXB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG59XHJcblxyXG5uYXYgYTpob3ZlcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigxNiwgMTg3LCAwKTtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -162,7 +213,7 @@ module.exports = ".nav button {\r\n    float: right;\r\n    margin-left: 1em;\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div \r\n  class=\"nav\"\r\n  >\r\n\r\n    <button\r\n      type=\"button\"\r\n      (click)=\"reportBug()\"\r\n    >Report Bug</button>\r\n\r\n    <button\r\n      type=\"button\"\r\n      (click)=\"requestFeature()\"\r\n    >Feature Request</button>\r\n\r\n</div>"
+module.exports = "<nav>\r\n\r\n  <ul>\r\n    <li class=\"float-left\"><a href=\"\">Table</a></li>\r\n    <li class=\"float-left\"><a href=\"/script\">Script</a></li>\r\n\r\n    <li class=\"float-right\"><a href=\"https://github.com/josemachado-dev/improved-broccoli/issues/new?assignees=josemachado-dev&labels=Feature+Request&template=feature_request.md&title=%5BFR%5D\" target=\"_blank\">Feature request</a></li>\r\n    <li class=\"float-right\"><a href=\"https://github.com/josemachado-dev/improved-broccoli/issues/new?assignees=josemachado-dev&labels=Bug+Report&template=bug_report.md&title=%5BBUG%5D\" target=\"_blank\">Report Bug</a></li>\r\n  </ul>\r\n  \r\n</nav>\r\n\r\n<br>"
 
 /***/ }),
 
@@ -190,12 +241,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var NavBarComponent = /** @class */ (function () {
     function NavBarComponent() {
     }
-    NavBarComponent.prototype.reportBug = function () {
-        window.open("https://github.com/josemachado-dev/improved-broccoli/issues/new/choose", "_blank");
-    };
-    NavBarComponent.prototype.requestFeature = function () {
-        window.open("https://github.com/josemachado-dev/improved-broccoli/issues/new/choose", "_blank");
-    };
     NavBarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-nav-bar',
@@ -229,7 +274,7 @@ module.exports = "textarea\r\n{\r\n  width:99.5%;\r\n}\r\n/*# sourceMappingURL=d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n\r\n  <input\r\n    type=\"file\"\r\n    (change)=\"onFileSelected($event)\"\r\n    accept=\".json\">\r\n\r\n  <button\r\n    type=\"button\"\r\n    (click)=\"openScript()\"\r\n  >Open Script</button>\r\n\r\n  <br>\r\n\r\n  <button \r\n    type=\"button\"\r\n    (click)=\"saveScript()\"\r\n  >Save Script</button>\r\n\r\n</div>\r\n\r\n<br>\r\n\r\n<div>\r\n\r\n  Script:\r\n  <input\r\n    [(ngModel)]=\"scriptName\"\r\n    placeholder=\"Script Name\"\r\n  >\r\n\r\n  <br>\r\n\r\n  <textarea\r\n    placeholder=\"This is where you'll (eventually) write your script!\"\r\n    rows=25\r\n    [attr.spellcheck]=\"spellcheckActive\"\r\n    [(ngModel)]=\"textareaText\"\r\n    ></textarea>\r\n</div>\r\n"
+module.exports = "<input\r\n  type=\"file\"\r\n  (change)=\"onFileSelected($event)\"\r\n  accept=\".json\">\r\n  \r\n<br>\r\n\r\n<button\r\n  type=\"button\"\r\n  (click)=\"openScript()\"\r\n>Open Script</button>\r\n\r\n<button \r\n  type=\"button\"\r\n  (click)=\"saveScript()\"\r\n>Save Script</button>\r\n\r\n<br><br>\r\n\r\n<div>\r\n\r\n  Script:\r\n  <input\r\n    [(ngModel)]=\"scriptName\"\r\n    placeholder=\"Script Name\"\r\n  >\r\n\r\n  <br>\r\n\r\n  <textarea\r\n    placeholder=\"This is where you'll (eventually) write your script!\"\r\n    rows=25\r\n    [attr.spellcheck]=\"spellcheckActive\"\r\n    [(ngModel)]=\"textareaText\"\r\n  ></textarea>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -314,7 +359,7 @@ var PassiveDialoguesComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "th {\r\n    background-color: rgb(40, 250, 40);\r\n    padding: 0.5em;\r\n}\r\n\r\ntr {\r\n    background-color: rgb(255, 255, 255);\r\n}\r\n\r\ntr:nth-child(even) {\r\n    background-color: rgb(200, 200, 200);\r\n}\r\n\r\ntr:hover {\r\n    background-color: rgba(150, 150, 150);\r\n}\r\n\r\ninput:focus {\r\n    border: 2px solid rgb(50, 50, 50);\r\n}\r\n\r\nbutton {\r\n    text-align: center;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGFibGUvdGFibGUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtDQUFrQztJQUNsQyxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksb0NBQW9DO0FBQ3hDOztBQUNBO0lBQ0ksb0NBQW9DO0FBQ3hDOztBQUNBO0lBQ0kscUNBQXFDO0FBQ3pDOztBQUVBO0lBQ0ksaUNBQWlDO0FBQ3JDOztBQUVBO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6InNyYy9hcHAvdGFibGUvdGFibGUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInRoIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYig0MCwgMjUwLCA0MCk7XHJcbiAgICBwYWRkaW5nOiAwLjVlbTtcclxufVxyXG5cclxudHIge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xyXG59XHJcbnRyOm50aC1jaGlsZChldmVuKSB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjAwLCAyMDAsIDIwMCk7XHJcbn1cclxudHI6aG92ZXIge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgxNTAsIDE1MCwgMTUwKTtcclxufVxyXG5cclxuaW5wdXQ6Zm9jdXMge1xyXG4gICAgYm9yZGVyOiAycHggc29saWQgcmdiKDUwLCA1MCwgNTApO1xyXG59XHJcblxyXG5idXR0b24ge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59Il19 */"
+module.exports = "th {\r\n    background-color: rgb(0, 150, 0);\r\n    padding: 0.25em;\r\n}\r\n\r\ntr:nth-child(odd) {\r\n    background-color: rgb(255, 255, 255);\r\n}\r\n\r\ntr:nth-child(even) {\r\n    background-color: rgb(200, 200, 200);\r\n}\r\n\r\ntr:hover {\r\n    background-color: rgba(150, 150, 150);\r\n}\r\n\r\ninput:focus {\r\n    border: 2px solid rgb(50, 50, 50);\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGFibGUvdGFibGUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGdDQUFnQztJQUNoQyxlQUFlO0FBQ25COztBQUVBO0lBQ0ksb0NBQW9DO0FBQ3hDOztBQUVBO0lBQ0ksb0NBQW9DO0FBQ3hDOztBQUVBO0lBQ0kscUNBQXFDO0FBQ3pDOztBQUVBO0lBQ0ksaUNBQWlDO0FBQ3JDIiwiZmlsZSI6InNyYy9hcHAvdGFibGUvdGFibGUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInRoIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigwLCAxNTAsIDApO1xyXG4gICAgcGFkZGluZzogMC4yNWVtO1xyXG59XHJcblxyXG50cjpudGgtY2hpbGQob2RkKSB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7XHJcbn1cclxuXHJcbnRyOm50aC1jaGlsZChldmVuKSB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjAwLCAyMDAsIDIwMCk7XHJcbn1cclxuXHJcbnRyOmhvdmVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMTUwLCAxNTAsIDE1MCk7XHJcbn1cclxuXHJcbmlucHV0OmZvY3VzIHtcclxuICAgIGJvcmRlcjogMnB4IHNvbGlkIHJnYig1MCwgNTAsIDUwKTtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -325,7 +370,7 @@ module.exports = "th {\r\n    background-color: rgb(40, 250, 40);\r\n    padding
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n\r\n  <input\r\n    type=\"file\"\r\n    (change)=\"onFileSelected($event)\"\r\n    accept=\".json\">\r\n\r\n  <button\r\n    type=\"button\"\r\n    (click)=\"openTable()\"\r\n  >Open Table</button>\r\n\r\n  <br>\r\n\r\n  <button \r\n    type=\"button\"\r\n    (click)=\"saveTable()\"\r\n  >Save Table</button>\r\n\r\n</div>\r\n\r\n<br>\r\n\r\n<div>\r\n  <button\r\n    type=\"button\"\r\n   (click)=\"testTemplate()\"\r\n  >Test Template</button>\r\n</div>\r\n\r\n<br>\r\n\r\n<div>\r\n\r\n  Table:\r\n  <input\r\n    [(ngModel)]=\"tableName\"\r\n    placeholder=\"Table Name\"\r\n  >\r\n\r\n  <table>\r\n    <thead>\r\n\r\n      <th>#</th>\r\n\r\n      <th\r\n        *ngFor=\"let column of columns;\r\n        let index = index;\r\n        trackBy: trackByIndex('title', index)\"\r\n        (click)=\"editColumnTitle(index, $event)\"\r\n        class=\"column-title\"\r\n      >\r\n        <input\r\n          [hidden]=\"editColumnTitleIndex != index\"\r\n          [(ngModel)]=\"columns[index]\"\r\n          [attr.spellcheck]=\"spellcheckActive\"\r\n        >\r\n        <span\r\n          [hidden]=\"editColumnTitleIndex == index\"\r\n        >{{columns[index]}}</span>\r\n\r\n        <button\r\n          type=\"button\"\r\n          (click)=\"removeColumn(index)\"\r\n        >X</button>\r\n      </th>\r\n\r\n      <th>\r\n        <button\r\n          type=\"button\"\r\n          (click)=\"addColumn()\"\r\n        >Add column</button>\r\n      </th>\r\n\r\n    </thead>\r\n\r\n    <tr \r\n      *ngFor=\"let row of rows;\r\n      let rowIndex = index;\r\n      trackBy: trackByIndex(rowIndex, 'data')\"\r\n    >\r\n      <td>{{rowIndex+1}}</td>\r\n\r\n      <td\r\n        *ngFor=\"let item of row.data;\r\n        let dataIndex = index;\r\n        trackBy: trackByIndex(rowIndex, dataIndex)\"\r\n        >\r\n          <input \r\n            [(ngModel)]=\"rows[rowIndex].data[dataIndex]\"\r\n            [attr.spellcheck]=\"spellcheckActive\"\r\n          >\r\n      </td>\r\n\r\n      <td>\r\n        <button\r\n          type=\"button\"\r\n          (click)=\"removeRow(rowIndex)\"\r\n        >X</button>\r\n      </td>\r\n\r\n    </tr>\r\n\r\n  </table>\r\n\r\n  <button \r\n    type=\"button\" \r\n    (click)=\"addRow()\"\r\n  >Add line</button>\r\n\r\n</div>"
+module.exports = "<input\r\n  type=\"file\"\r\n  (change)=\"onFileSelected($event)\"\r\n  accept=\".json\"\r\n>\r\n\r\n<br>\r\n\r\n<button\r\n  type=\"button\"\r\n  (click)=\"openTable()\"\r\n>Open Table</button>\r\n\r\n<button \r\n  type=\"button\"\r\n  (click)=\"saveTable()\"\r\n>Save Table</button>\r\n\r\n<br><br>\r\n\r\n<button\r\n  type=\"button\"\r\n  (click)=\"testTemplate()\"\r\n>Char Dialogue Template</button>\r\n\r\n<br><br>\r\n\r\n<div>\r\n\r\n  Table:\r\n  <input\r\n    [(ngModel)]=\"tableName\"\r\n    placeholder=\"Table Name\"\r\n  >\r\n\r\n  <table>\r\n      <thead>\r\n\r\n        <th>#</th>\r\n\r\n        <th\r\n          *ngFor=\"let column of columns;\r\n          let index = index;\r\n          trackBy: trackByIndex('title', index)\"\r\n          (click)=\"editColumnTitle(index, $event)\"\r\n          class=\"column-title\"\r\n        >\r\n          <input\r\n            [hidden]=\"editColumnTitleIndex != index\"\r\n            [(ngModel)]=\"columns[index]\"\r\n            [attr.spellcheck]=\"spellcheckActive\"\r\n          >\r\n          <span\r\n            [hidden]=\"editColumnTitleIndex == index\"\r\n          >{{columns[index]}}</span>\r\n\r\n          <button\r\n            type=\"button\"\r\n            (click)=\"removeColumn(index)\"\r\n          >X</button>\r\n        </th>\r\n\r\n        <th>\r\n          <button\r\n            type=\"button\"\r\n            (click)=\"addColumn()\"\r\n          >Add column</button>\r\n        </th>\r\n\r\n      </thead>\r\n\r\n      <tr \r\n        *ngFor=\"let row of rows;\r\n        let rowIndex = index;\r\n        trackBy: trackByIndex(rowIndex, 'data')\"\r\n      >\r\n        <td>{{rowIndex+1}}</td>\r\n\r\n        <td\r\n          *ngFor=\"let item of row.data;\r\n          let dataIndex = index;\r\n          trackBy: trackByIndex(rowIndex, dataIndex)\"\r\n          >\r\n            <input \r\n              [(ngModel)]=\"rows[rowIndex].data[dataIndex]\"\r\n              [attr.spellcheck]=\"spellcheckActive\"\r\n            >\r\n        </td>\r\n\r\n        <td>\r\n          <button\r\n            type=\"button\"\r\n            (click)=\"removeRow(rowIndex)\"\r\n          >X</button>\r\n        </td>\r\n\r\n      </tr>\r\n\r\n  </table>\r\n\r\n  <button \r\n    type=\"button\" \r\n    (click)=\"addRow()\"\r\n  >Add line</button>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -492,7 +537,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <input\r\n    type=\"checkbox\"\r\n    [(ngModel)]=\"spellcheck\"\r\n    (change)=\"saveStorage()\"\r\n    value=\"spell\"\r\n    checked\r\n  > Spell Checker\r\n  \r\n  <br>\r\n\r\n  Language\r\n  <select>\r\n    <option \r\n      *ngFor=\"let lang of languages\"\r\n      [ngValue]=\"lang.id\"\r\n    >{{lang.name}}\r\n    </option>\r\n  </select>\r\n\r\n  <br>\r\n\r\n</div>"
+module.exports = "<div>\r\n  \r\n  <input\r\n    type=\"checkbox\"\r\n    [(ngModel)]=\"darkMode\"\r\n    (change)=\"darkModeStorage()\"\r\n    value=\"dark\"\r\n  > Dark Mode\r\n\r\n  <input\r\n    type=\"checkbox\"\r\n    [(ngModel)]=\"spellcheck\"\r\n    (change)=\"spellcheckStorage()\"\r\n    value=\"spell\"\r\n  > Spell Checker\r\n  \r\n  <br>\r\n\r\n  Language\r\n  <select>\r\n    <option \r\n      *ngFor=\"let lang of languages\"\r\n      [ngValue]=\"lang.id\"\r\n    >{{lang.name}}\r\n    </option>\r\n  </select>\r\n\r\n  <br>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -533,11 +578,16 @@ var UserPreferencesComponent = /** @class */ (function () {
             { id: "es", name: "Spanish" },
         ];
         if (!localStorage.getItem("spellchecker")) {
-            this.saveStorage();
+            this.spellcheckStorage();
         }
     };
-    UserPreferencesComponent.prototype.saveStorage = function () {
+    UserPreferencesComponent.prototype.spellcheckStorage = function () {
+        this.spellcheck = !this.spellcheck;
         localStorage.setItem("spellchecker", JSON.stringify(this.spellcheck));
+    };
+    UserPreferencesComponent.prototype.darkModeStorage = function () {
+        this.darkMode = !this.darkMode;
+        localStorage.setItem("darkMode", JSON.stringify(this.darkMode));
     };
     UserPreferencesComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
