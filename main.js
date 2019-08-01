@@ -213,7 +213,7 @@ module.exports = "nav ul {\r\n    background-color: rgb(34, 172, 64);\r\n}\r\n\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav>\r\n\r\n  <ul>\r\n    <li class=\"float-left\"><a href=\"\">Table</a></li>\r\n<!--     <li class=\"float-left\"><a href=\"/script\">Script</a></li>   -->\r\n    <li class=\"float-right\"><a href=\"https://github.com/josemachado-dev/improved-broccoli/issues/new?assignees=josemachado-dev&labels=Feature+Request&template=feature_request.md&title=%5BFR%5D\" target=\"_blank\">Feature request</a></li>\r\n    <li class=\"float-right\"><a href=\"https://github.com/josemachado-dev/improved-broccoli/issues/new?assignees=josemachado-dev&labels=Bug+Report&template=bug_report.md&title=%5BBUG%5D\" target=\"_blank\">Report Bug</a></li>\r\n  </ul>\r\n  \r\n</nav>\r\n\r\n<br>"
+module.exports = "<nav>\r\n\r\n  <ul>\r\n    <li class=\"float-left\"><a href=\"\">Table</a></li>\r\n    <li class=\"float-left\"><a href=\"/script\">Script</a></li>\r\n\r\n    <li class=\"float-right\"><a href=\"https://github.com/josemachado-dev/improved-broccoli/issues/new?assignees=josemachado-dev&labels=Feature+Request&template=feature_request.md&title=%5BFR%5D\" target=\"_blank\">Feature request</a></li>\r\n    <li class=\"float-right\"><a href=\"https://github.com/josemachado-dev/improved-broccoli/issues/new?assignees=josemachado-dev&labels=Bug+Report&template=bug_report.md&title=%5BBUG%5D\" target=\"_blank\">Report Bug</a></li>\r\n  </ul>\r\n  \r\n</nav>\r\n\r\n<br>"
 
 /***/ }),
 
@@ -370,7 +370,7 @@ module.exports = "th {\r\n    background-color: rgb(0, 150, 0);\r\n    padding: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<input\r\n  type=\"file\"\r\n  (change)=\"onFileSelected($event)\"\r\n  accept=\".json\"\r\n>\r\n\r\n<br>\r\n\r\n<button\r\n  type=\"button\"\r\n  (click)=\"openTable()\"\r\n>Open Table</button>\r\n\r\n<button \r\n  type=\"button\"\r\n  (click)=\"saveTable()\"\r\n>Save Table</button>\r\n\r\n<br><br>\r\n\r\n<button\r\n  type=\"button\"\r\n  (click)=\"testTemplate()\"\r\n>Char Dialogue Template</button>\r\n\r\n<br><br>\r\n\r\n<div>\r\n\r\n  Table:\r\n  <input\r\n    [(ngModel)]=\"tableName\"\r\n    placeholder=\"Table Name\"\r\n  >\r\n\r\n  <table>\r\n      <thead>\r\n\r\n        <th>#</th>\r\n\r\n        <th\r\n          *ngFor=\"let column of columns;\r\n          let index = index;\r\n          trackBy: trackByIndex('title', index)\"\r\n          (click)=\"editColumnTitle(index, $event)\"\r\n          class=\"column-title\"\r\n        >\r\n          <input\r\n            [hidden]=\"editColumnTitleIndex != index\"\r\n            [(ngModel)]=\"columns[index]\"\r\n            [attr.spellcheck]=\"spellcheckActive\"\r\n          >\r\n          <span\r\n            [hidden]=\"editColumnTitleIndex == index\"\r\n          >{{columns[index]}}</span>\r\n\r\n          <button\r\n            type=\"button\"\r\n            (click)=\"removeColumn(index)\"\r\n          >X</button>\r\n        </th>\r\n\r\n        <th>\r\n          <button\r\n            type=\"button\"\r\n            (click)=\"addColumn()\"\r\n          >Add column</button>\r\n        </th>\r\n\r\n      </thead>\r\n\r\n      <tr \r\n        *ngFor=\"let row of rows;\r\n        let rowIndex = index;\r\n        trackBy: trackByIndex(rowIndex, 'data')\"\r\n      >\r\n        <td>{{rowIndex+1}}</td>\r\n\r\n        <td\r\n          *ngFor=\"let item of row.data;\r\n          let dataIndex = index;\r\n          trackBy: trackByIndex(rowIndex, dataIndex)\"\r\n          >\r\n            <input \r\n              [(ngModel)]=\"rows[rowIndex].data[dataIndex]\"\r\n              [attr.spellcheck]=\"spellcheckActive\"\r\n            >\r\n        </td>\r\n\r\n        <td>\r\n          <button\r\n            type=\"button\"\r\n            (click)=\"removeRow(rowIndex)\"\r\n          >X</button>\r\n        </td>\r\n\r\n      </tr>\r\n\r\n  </table>\r\n\r\n  <button \r\n    type=\"button\" \r\n    (click)=\"addRow()\"\r\n  >Add line</button>\r\n\r\n</div>"
+module.exports = "<input\r\n  type=\"file\"\r\n  (change)=\"onFileSelected($event)\"\r\n  accept=\".json\"\r\n>\r\n\r\n<br>\r\n\r\n<button\r\n  type=\"button\"\r\n  (click)=\"openTable()\"\r\n>Open Table</button>\r\n\r\n<button \r\n  type=\"button\"\r\n  (click)=\"saveTable()\"\r\n>Save Table</button>\r\n\r\n<br><br>\r\n\r\n<!-- <button\r\n  type=\"button\"\r\n  (click)=\"Templates('CharDialogue')\"\r\n>Char Dialogue Template</button> -->\r\n\r\n<button\r\n  type=\"button\"\r\n  (click)=\"Templates('Caretos')\"\r\n>Caretos Template</button>\r\n\r\n<br><br>\r\n\r\n<div class=\"table\">\r\n\r\n  Table:\r\n  <input\r\n    [(ngModel)]=\"tableName\"\r\n    placeholder=\"Table Name\"\r\n  >\r\n\r\n  <table>\r\n      <thead>\r\n\r\n        <th>#</th>\r\n\r\n        <th\r\n          *ngFor=\"let column of columns;\r\n          let index = index;\r\n          trackBy: trackByIndex('title', index)\"\r\n          (click)=\"editColumnTitle(index, $event)\"\r\n          class=\"column-title\"\r\n        >\r\n          <input\r\n            [hidden]=\"editColumnTitleIndex != index\"\r\n            [(ngModel)]=\"columns[index]\"\r\n            [attr.spellcheck]=\"spellcheckActive\"\r\n          >\r\n          <span\r\n            [hidden]=\"editColumnTitleIndex == index\"\r\n          >{{columns[index]}}</span>\r\n\r\n          <button\r\n            type=\"button\"\r\n            (click)=\"removeColumn(index)\"\r\n          >X</button>\r\n        </th>\r\n\r\n        <th>\r\n          <button\r\n            type=\"button\"\r\n            (click)=\"addColumn()\"\r\n          >Add column</button>\r\n        </th>\r\n\r\n      </thead>\r\n\r\n      <tr \r\n        *ngFor=\"let row of rows;\r\n        let rowIndex = index;\r\n        trackBy: trackByIndex(rowIndex, 'data')\"\r\n      >\r\n        <td>{{rowIndex+1}}</td>\r\n\r\n        <td\r\n          *ngFor=\"let item of row.data;\r\n          let dataIndex = index;\r\n          trackBy: trackByIndex(rowIndex, dataIndex)\"\r\n          >\r\n            <input \r\n              [(ngModel)]=\"rows[rowIndex].data[dataIndex]\"\r\n              [attr.spellcheck]=\"spellcheckActive\"\r\n            >\r\n        </td>\r\n\r\n        <td>\r\n          <button\r\n            type=\"button\"\r\n            (click)=\"removeRow(rowIndex)\"\r\n          >X</button>\r\n        </td>\r\n\r\n      </tr>\r\n\r\n  </table>\r\n\r\n  <button \r\n    type=\"button\" \r\n    (click)=\"addRow()\"\r\n  >Add line</button>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -496,13 +496,32 @@ var TableComponent = /** @class */ (function () {
             //Should Hide or Disable the "Open Table" Button
         }
     };
-    TableComponent.prototype.testTemplate = function () {
-        //test for the implementation of Templates
-        this.columns = [];
-        this.rows = [];
-        this.addColumn("Character");
-        this.addColumn("Line");
-        this.addRow();
+    TableComponent.prototype.Templates = function (templateName) {
+        if (templateName === void 0) { templateName = "Debug"; }
+        switch (templateName) {
+            case "Debug":
+                this.columns = [];
+                this.rows = [];
+                this.addColumn("Debug");
+                this.addRow();
+                break;
+            case "CharDialogue":
+                this.columns = [];
+                this.rows = [];
+                this.addColumn("Character");
+                this.addColumn("Line");
+                this.addRow();
+                break;
+            case "Caretos":
+                this.columns = [];
+                this.rows = [];
+                this.addColumn("Ficheiro");
+                this.addColumn("Título");
+                this.addColumn("Ficha Técnica");
+                this.addColumn("Descrição");
+                this.addRow();
+                break;
+        }
     };
     TableComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
